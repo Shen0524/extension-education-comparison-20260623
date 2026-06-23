@@ -245,6 +245,30 @@
       margin-bottom: 4px;
     }
 
+    .inline-visual {
+      flex: 0 0 220px;
+      margin: 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .inline-visual img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .inline-visual figcaption {
+      padding: 10px 12px;
+      color: #475467;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
     section {
       padding: clamp(18px, 3vw, 28px);
       margin: 18px 0;
@@ -694,7 +718,6 @@
     </div>
     <nav aria-label="頁面導覽">
       <a href="#summary">總覽</a>
-      <a href="#visuals">視覺素材</a>
       <a href="#market">現況產值</a>
       <a href="#organization">人力組織</a>
       <a href="#model">營運模式</a>
@@ -738,39 +761,10 @@
           <strong>近三年產值與熱銷課程</strong>
         </div>
         <div class="hero-visual">
-          <img src="ip01.png" alt="推廣教育研究與簡報情境插畫">
+          <img src="visuals/ip01-01.png" alt="推廣教育研究與簡報情境人物插畫">
         </div>
       </aside>
     </div>
-
-    <section id="visuals">
-      <div class="section-head">
-        <div>
-          <h2>視覺素材融入</h2>
-          <p>將 `ip01.png` 與 `ip02.png` 作為報告的人物專業形象與推廣教育研究情境，強化頁面的視覺辨識度。兩張圖皆保留原圖連結，點擊圖片可開啟完整尺寸。</p>
-        </div>
-      </div>
-      <div class="visual-grid">
-        <figure class="visual-card">
-          <a href="ip01.png" aria-label="開啟 ip01 原圖">
-            <img src="ip01.png" alt="專業人員使用平板、簡報醫學圖像與思考的三格插畫">
-          </a>
-          <figcaption>
-            <strong>IP01：研究、簡報與決策</strong>
-            可搭配本頁的產值、課程熱銷與行政建議，呈現推廣教育從資料蒐集到策略判讀的流程。
-          </figcaption>
-        </figure>
-        <figure class="visual-card">
-          <a href="ip02.png" aria-label="開啟 ip02 原圖">
-            <img src="ip02.png" alt="專業人員書寫、站姿與互動簡報的三格插畫">
-          </a>
-          <figcaption>
-            <strong>IP02：課程企劃與溝通</strong>
-            可對應人力組織、課程企劃、招生營運與行政品保等推廣教育工作場景。
-          </figcaption>
-        </figure>
-      </div>
-    </section>
 
     <section id="market">
       <div class="section-head">
@@ -778,6 +772,10 @@
           <h2>新增：現況、規模、產值與熱銷課程</h2>
           <p>依 2026-06-23 公開網站、預算書、決算書與課程頁快照整理。課程頁快照代表公開頁面可見規模，不等同年度實際開班數、報名人次或營收。</p>
         </div>
+        <figure class="inline-visual">
+          <img src="visuals/ip02-01.png" alt="推廣教育資料整理與課程分析人物插畫">
+          <figcaption>資料整理與課程分析</figcaption>
+        </figure>
         <a class="button" href="推廣教育現況規模產值與建議_20260623.md">完整文字報告</a>
       </div>
 
@@ -963,6 +961,10 @@
           <h2>人力組織架構分析</h2>
           <p>本段依三校公開網站可見資訊整理。彰師大與中山醫揭露成員/職掌較完整；東海推廣部公開的是部門入口、服務功能、辦公時間與平台化課程資訊，未見同等詳細的人員名冊，因此以下將「官方揭露」與「營運功能推估」分開呈現。</p>
         </div>
+        <figure class="inline-visual">
+          <img src="visuals/ip02-02.png" alt="推廣教育組織協調與職能分工人物插畫">
+          <figcaption>組織協調與職能分工</figcaption>
+        </figure>
       </div>
 
       <div class="org-grid">
@@ -1233,7 +1235,16 @@
     </section>
 
     <section id="recommendations">
-      <h2>五、給中山醫推廣服務組的改善建議</h2>
+      <div class="section-head">
+        <div>
+          <h2>五、給中山醫推廣服務組的改善建議</h2>
+          <p>建議以制度後台、平台前台與醫學特色產品線三件事同步推進，先降低行政負擔，再提高招生轉換與課程單價。</p>
+        </div>
+        <figure class="inline-visual">
+          <img src="visuals/ip01-03.png" alt="推廣教育策略建議與行動規劃人物插畫">
+          <figcaption>策略建議與行動規劃</figcaption>
+        </figure>
+      </div>
       <div class="recommendations">
         <article class="rec">
           <h3>建立推廣教育行政專區</h3>
