@@ -189,6 +189,62 @@
       line-height: 1.25;
     }
 
+    .hero-visual {
+      margin-top: 2px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #e8edf3;
+      background: #fff;
+    }
+
+    .hero-visual img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center 18%;
+    }
+
+    .visual-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      align-items: start;
+    }
+
+    .visual-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .visual-card a {
+      display: block;
+      background: #f5f7fa;
+    }
+
+    .visual-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .visual-card figcaption {
+      padding: 14px 16px 16px;
+      color: #475467;
+      font-size: 14px;
+    }
+
+    .visual-card strong {
+      display: block;
+      color: var(--ink);
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
     section {
       padding: clamp(18px, 3vw, 28px);
       margin: 18px 0;
@@ -595,7 +651,7 @@
     @media (max-width: 900px) {
       .hero, .cards, .compare-grid, .recommendations, .sources,
       .kpi-grid, .insight-band, .course-list, .swot, .roadmap, .timeline,
-      .org-grid, .org-flow, .org-risk {
+      .org-grid, .org-flow, .org-risk, .visual-grid {
         grid-template-columns: 1fr;
       }
 
@@ -638,6 +694,7 @@
     </div>
     <nav aria-label="頁面導覽">
       <a href="#summary">總覽</a>
+      <a href="#visuals">視覺素材</a>
       <a href="#market">現況產值</a>
       <a href="#organization">人力組織</a>
       <a href="#model">營運模式</a>
@@ -680,8 +737,40 @@
           <span>新增分析</span>
           <strong>近三年產值與熱銷課程</strong>
         </div>
+        <div class="hero-visual">
+          <img src="ip01.png" alt="推廣教育研究與簡報情境插畫">
+        </div>
       </aside>
     </div>
+
+    <section id="visuals">
+      <div class="section-head">
+        <div>
+          <h2>視覺素材融入</h2>
+          <p>將 `ip01.png` 與 `ip02.png` 作為報告的人物專業形象與推廣教育研究情境，強化頁面的視覺辨識度。兩張圖皆保留原圖連結，點擊圖片可開啟完整尺寸。</p>
+        </div>
+      </div>
+      <div class="visual-grid">
+        <figure class="visual-card">
+          <a href="ip01.png" aria-label="開啟 ip01 原圖">
+            <img src="ip01.png" alt="專業人員使用平板、簡報醫學圖像與思考的三格插畫">
+          </a>
+          <figcaption>
+            <strong>IP01：研究、簡報與決策</strong>
+            可搭配本頁的產值、課程熱銷與行政建議，呈現推廣教育從資料蒐集到策略判讀的流程。
+          </figcaption>
+        </figure>
+        <figure class="visual-card">
+          <a href="ip02.png" aria-label="開啟 ip02 原圖">
+            <img src="ip02.png" alt="專業人員書寫、站姿與互動簡報的三格插畫">
+          </a>
+          <figcaption>
+            <strong>IP02：課程企劃與溝通</strong>
+            可對應人力組織、課程企劃、招生營運與行政品保等推廣教育工作場景。
+          </figcaption>
+        </figure>
+      </div>
+    </section>
 
     <section id="market">
       <div class="section-head">
