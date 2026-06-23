@@ -1,0 +1,1231 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>三校推廣教育營運模式比較</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #667085;
+      --line: #d9e1ea;
+      --soft: #f5f7fa;
+      --panel: #ffffff;
+      --blue: #2457a6;
+      --teal: #007c7a;
+      --green: #2f7d32;
+      --amber: #a15c00;
+      --red: #b42318;
+      --shadow: 0 8px 28px rgba(18, 38, 63, .08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #f8fafc;
+      font-family: "Microsoft JhengHei", "Noto Sans TC", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px clamp(18px, 4vw, 44px);
+      background: rgba(255, 255, 255, .94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.25;
+      min-width: 180px;
+    }
+
+    .brand strong { font-size: 16px; }
+    .brand span { color: var(--muted); font-size: 12px; }
+
+    nav {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-bottom: 2px;
+    }
+
+    nav a {
+      color: #344054;
+      font-size: 14px;
+      padding: 7px 10px;
+      border-radius: 6px;
+    }
+
+    nav a:hover { background: var(--soft); text-decoration: none; }
+
+    main {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 56px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(280px, .7fr);
+      gap: 20px;
+      align-items: stretch;
+      margin-bottom: 22px;
+    }
+
+    .hero-text, .summary-card, section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-text { padding: clamp(22px, 4vw, 38px); }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--teal);
+      font-weight: 700;
+      letter-spacing: .04em;
+      font-size: 13px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 24px;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 18px 0 8px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    p { margin: 0 0 12px; }
+
+    .lead {
+      color: #344054;
+      font-size: 17px;
+      max-width: 760px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 9px 14px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 14px;
+    }
+
+    .button.primary {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: white;
+    }
+
+    .button:hover { text-decoration: none; filter: brightness(.98); }
+
+    .summary-card {
+      padding: 20px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .metric {
+      padding: 14px;
+      border-radius: 8px;
+      background: var(--soft);
+      border: 1px solid #e8edf3;
+    }
+
+    .metric span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 2px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 20px;
+      line-height: 1.25;
+    }
+
+    section {
+      padding: clamp(18px, 3vw, 28px);
+      margin: 18px 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .school-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      background: #fff;
+      min-height: 100%;
+    }
+
+    .school-card h3 { margin-top: 0; }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .tag.ncue { background: var(--green); }
+    .tag.thu { background: var(--blue); }
+    .tag.csmu { background: var(--amber); }
+
+    .section-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .section-head p {
+      max-width: 760px;
+      color: #475467;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 18px 0;
+    }
+
+    .kpi {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: linear-gradient(180deg, #fff, #f8fbfd);
+    }
+
+    .kpi small {
+      display: block;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .kpi strong {
+      display: block;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .kpi span {
+      display: block;
+      margin-top: 6px;
+      color: #475467;
+      font-size: 13px;
+    }
+
+    .insight-band {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .insight {
+      border-radius: 8px;
+      padding: 16px;
+      color: #fff;
+    }
+
+    .insight.ncue { background: #2f7d32; }
+    .insight.thu { background: #2457a6; }
+    .insight.csmu { background: #a15c00; }
+    .insight h3 { margin-top: 0; color: #fff; }
+    .insight p { color: rgba(255, 255, 255, .9); }
+
+    .bars {
+      display: grid;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 88px 1fr 112px;
+      gap: 10px;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .bar-track {
+      height: 12px;
+      border-radius: 999px;
+      background: #e8edf3;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: inherit;
+      background: var(--blue);
+    }
+
+    .bar-fill.ncue { background: var(--green); }
+    .bar-fill.thu { background: var(--blue); }
+    .bar-fill.csmu { background: var(--amber); }
+
+    .course-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .course-panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: #fff;
+    }
+
+    .course-panel h3 { margin-top: 0; }
+    .course-panel ol { margin: 8px 0 0; padding-left: 20px; }
+    .course-panel li { margin: 7px 0; }
+
+    .swot {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .swot-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: #fff;
+    }
+
+    .swot-card h3 { margin-top: 0; }
+
+    .roadmap {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      counter-reset: phase;
+    }
+
+    .phase {
+      position: relative;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      background: #fff;
+    }
+
+    .phase::before {
+      counter-increment: phase;
+      content: "階段 " counter(phase);
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #eef3f8;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+      counter-reset: step;
+    }
+
+    .timeline-step {
+      border-top: 4px solid var(--teal);
+      border-radius: 6px;
+      padding: 12px;
+      background: #f2fbfa;
+      min-height: 128px;
+    }
+
+    .timeline-step::before {
+      counter-increment: step;
+      content: counter(step);
+      display: grid;
+      place-items: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: #fff;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .timeline-step strong { display: block; margin-bottom: 6px; }
+
+    .org-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin: 16px 0;
+    }
+
+    .org-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      background: #fff;
+    }
+
+    .org-card h3 { margin-top: 0; }
+
+    .org-count {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin: 10px 0;
+    }
+
+    .org-count strong {
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .org-count span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .org-flow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin: 14px 0;
+    }
+
+    .org-node {
+      position: relative;
+      padding: 14px;
+      border-radius: 8px;
+      background: #f5f7fa;
+      border: 1px solid #e8edf3;
+      min-height: 108px;
+    }
+
+    .org-node strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .org-node span {
+      color: #475467;
+      font-size: 13px;
+    }
+
+    .org-node.accent {
+      background: #eef7f6;
+      border-color: #bee3df;
+    }
+
+    .org-risk {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .org-risk .note {
+      border-left-color: var(--amber);
+      background: #fff8ed;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    table {
+      width: 100%;
+      min-width: 860px;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th, td {
+      padding: 12px 14px;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+    }
+
+    th {
+      background: #eef3f8;
+      color: #24324a;
+      font-weight: 800;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .compare-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .note {
+      border-left: 4px solid var(--blue);
+      background: #f2f6fc;
+      padding: 14px 16px;
+      border-radius: 6px;
+    }
+
+    .recommendations {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      counter-reset: rec;
+    }
+
+    .rec {
+      position: relative;
+      padding: 18px 18px 18px 58px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .rec::before {
+      counter-increment: rec;
+      content: counter(rec);
+      position: absolute;
+      left: 16px;
+      top: 18px;
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--teal);
+      color: white;
+      font-weight: 800;
+    }
+
+    .rec h3 { margin-top: 0; }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+
+    li { margin: 4px 0; }
+
+    .sources {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .source-group {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: #fff;
+    }
+
+    .source-group h3 { margin-top: 0; }
+    .source-group a { overflow-wrap: anywhere; }
+
+    .footer {
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+      margin-top: 28px;
+    }
+
+    @media (max-width: 900px) {
+      .hero, .cards, .compare-grid, .recommendations, .sources,
+      .kpi-grid, .insight-band, .course-list, .swot, .roadmap, .timeline,
+      .org-grid, .org-flow, .org-risk {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        flex-direction: column;
+      }
+
+      .bar-row {
+        grid-template-columns: 72px 1fr;
+      }
+
+      .bar-row span {
+        grid-column: 2;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav { width: 100%; }
+    }
+
+    @media print {
+      .topbar, .actions { display: none; }
+      body { background: #fff; }
+      main { width: 100%; padding: 0; }
+      .hero-text, .summary-card, section, .school-card, .rec, .source-group {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <strong>推廣教育比較</strong>
+      <span>彰師大、東海、中山醫</span>
+    </div>
+    <nav aria-label="頁面導覽">
+      <a href="#summary">總覽</a>
+      <a href="#market">現況產值</a>
+      <a href="#organization">人力組織</a>
+      <a href="#model">營運模式</a>
+      <a href="#process">行政做法</a>
+      <a href="#csmu">中山醫比較</a>
+      <a href="#recommendations">建議</a>
+      <a href="#sources">來源</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero" id="summary">
+      <div class="hero-text">
+        <p class="eyebrow">2026-06-23 資料蒐集整理</p>
+        <h1>台灣三校推廣教育營運模式與行政做法比較</h1>
+        <p class="lead">本頁整理國立彰化師範大學、東海大學與中山醫學大學推廣教育的公開資訊，聚焦營運定位、課程產品、報名繳費、退費轉班、證書管理與中山醫推廣服務組可借鏡的做法。</p>
+        <div class="actions">
+          <a class="button primary" href="台灣三校推廣教育營運模式與行政做法比較.md">開啟原始報告</a>
+          <a class="button" href="推廣教育現況規模產值與建議_20260623.md">現況產值報告</a>
+          <a class="button" href="public_course_snapshot_20260623.json">課程快照 JSON</a>
+          <a class="button" href="資料來源清單.md">資料來源清單</a>
+          <button class="button" type="button" onclick="window.print()">列印 / 另存 PDF</button>
+        </div>
+      </div>
+
+      <aside class="summary-card" aria-label="重點摘要">
+        <div class="metric">
+          <span>比較對象</span>
+          <strong>3 所大學</strong>
+        </div>
+        <div class="metric">
+          <span>核心判讀</span>
+          <strong>制度後台 + 平台前台</strong>
+        </div>
+        <div class="metric">
+          <span>中山醫優勢</span>
+          <strong>醫學特色與教務行政背書</strong>
+        </div>
+        <div class="metric">
+          <span>新增分析</span>
+          <strong>近三年產值與熱銷課程</strong>
+        </div>
+      </aside>
+    </div>
+
+    <section id="market">
+      <div class="section-head">
+        <div>
+          <h2>新增：現況、規模、產值與熱銷課程</h2>
+          <p>依 2026-06-23 公開網站、預算書、決算書與課程頁快照整理。課程頁快照代表公開頁面可見規模，不等同年度實際開班數、報名人次或營收。</p>
+        </div>
+        <a class="button" href="推廣教育現況規模產值與建議_20260623.md">完整文字報告</a>
+      </div>
+
+      <div class="kpi-grid" aria-label="核心數字">
+        <div class="kpi">
+          <small>東海平均推廣收入</small>
+          <strong>9,359 萬/年</strong>
+          <span>110-112 學年平均，占平均收入結構 3%</span>
+        </div>
+        <div class="kpi">
+          <small>彰師大收入成長</small>
+          <strong>+33.7%</strong>
+          <span>112 至 114 年度決算約 3,061 萬升至 4,091 萬</span>
+        </div>
+        <div class="kpi">
+          <small>中山醫最新預算</small>
+          <strong>1,200 萬</strong>
+          <span>114 學年度推廣教育收入預算</span>
+        </div>
+        <div class="kpi">
+          <small>東海公開課程快照</small>
+          <strong>312 筆</strong>
+          <span>招生中 288、確定開課 117、已額滿 24</span>
+        </div>
+      </div>
+
+      <div class="insight-band">
+        <article class="insight ncue">
+          <h3>彰師大：制度型成長</h3>
+          <p>推廣收入近年增長明顯，師培、第二專長、學分與證照課程形成穩定需求。</p>
+        </article>
+        <article class="insight thu">
+          <h3>東海：平台型規模</h3>
+          <p>課程數、價格帶、狀態標示與高價產品線完整，具事業部營運特徵。</p>
+        </article>
+        <article class="insight csmu">
+          <h3>中山醫：醫學型潛力</h3>
+          <p>醫學特色強，但收入約千萬上下，成人高價與機構委訓仍有放大空間。</p>
+        </article>
+      </div>
+
+      <h3>近三年產值與規模比較</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>學校</th>
+              <th>近三年產值/收入</th>
+              <th>公開課程規模快照</th>
+              <th>判讀</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tag ncue">彰師大</span></td>
+              <td>112 年度 30,609,496 元；113 年度 38,803,712 元；114 年度 40,914,983 元。</td>
+              <td>歷史課程明細連結約 666 筆；目前可報名解析 24 筆。</td>
+              <td>制度穩、教育與師培特色強，收入增幅突出。</td>
+            </tr>
+            <tr>
+              <td><span class="tag thu">東海</span></td>
+              <td>110-112 學年平均 93,590 千元/年；112、113、114 學年度預算趨勢分別約增 2.1%、1%、9%。</td>
+              <td>API 可解析 312 筆；招生中 288、確定開課 117、已額滿 24；價格約 300 至 175,500 元。</td>
+              <td>三校中規模最大、市場化最高、產品線最完整。</td>
+            </tr>
+            <tr>
+              <td><span class="tag csmu">中山醫</span></td>
+              <td>111 學年度 10,400,543 元；112 學年度 9,730,499 元；113 學年度 9,753,500 元；114 學年度預算 12,000,000 元。</td>
+              <td>首頁分類：研究所學分班 5、大學部學分班 8、專業證照 3、養生保健 1、國高中營隊 8、政府補助 5。</td>
+              <td>醫學特色鮮明，但產值約為東海一成、彰師大四分之一，成長空間大。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>收入量級視覺比較</h3>
+      <div class="bars" aria-label="推廣教育收入量級比較">
+        <div class="bar-row">
+          <strong>東海</strong>
+          <div class="bar-track"><div class="bar-fill thu" style="width: 100%"></div></div>
+          <span>約 9,359 萬/年</span>
+        </div>
+        <div class="bar-row">
+          <strong>彰師大</strong>
+          <div class="bar-track"><div class="bar-fill ncue" style="width: 44%"></div></div>
+          <span>114 約 4,091 萬</span>
+        </div>
+        <div class="bar-row">
+          <strong>中山醫</strong>
+          <div class="bar-track"><div class="bar-fill csmu" style="width: 13%"></div></div>
+          <span>114 預算 1,200 萬</span>
+        </div>
+      </div>
+
+      <h3>熱銷課程代理指標</h3>
+      <div class="course-list">
+        <article class="course-panel">
+          <span class="tag ncue">彰師大</span>
+          <h3>教育與證照需求</h3>
+          <ol>
+            <li>師資培訓與第二專長學分班：特殊教育、童軍、本土語文台語。</li>
+            <li>證照檢定：勞資事務師、淨零碳規劃管理師。</li>
+            <li>財會金融：會計師資格學士學分班。</li>
+            <li>心理諮商：沙盤治療、親子工作與諮商工作坊。</li>
+          </ol>
+        </article>
+        <article class="course-panel">
+          <span class="tag thu">東海</span>
+          <h3>長銷與高價產品並存</h3>
+          <ol>
+            <li>日語 J1/J2：J1 可見屆別高達 194，J2 高達 155。</li>
+            <li>採購專業人員基礎訓練班：可見屆別 122 且有已額滿狀態。</li>
+            <li>PMP 國際專案管理師：可見屆別 88、89。</li>
+            <li>室內設計/裝修乙級、企業 AI、國際管理研習與馬術營隊。</li>
+          </ol>
+        </article>
+        <article class="course-panel">
+          <span class="tag csmu">中山醫</span>
+          <h3>醫學體驗具辨識度</h3>
+          <ol>
+            <li>人體解剖體驗營：可見第 24 期。</li>
+            <li>全國高中牙醫營：可見第 27 期，招生名額曾達 96 名。</li>
+            <li>數位牙醫體驗營與醫學/微生物免疫營隊。</li>
+            <li>坐月子照護員、樂齡大學、職場健康促進微學程。</li>
+          </ol>
+        </article>
+      </div>
+
+      <h3>強項與弱勢矩陣</h3>
+      <div class="swot">
+        <article class="swot-card">
+          <h3>彰師大</h3>
+          <p><strong>強項：</strong>師範大學品牌、師培資源、法規審查與經費制度完整，第二專長與學分班具剛性需求。</p>
+          <p><strong>弱勢：</strong>市場化平台、價格/名額呈現、企業客製與高價國際課程包裝不如東海。</p>
+        </article>
+        <article class="swot-card">
+          <h3>東海</h3>
+          <p><strong>強項：</strong>搜尋、價格、優惠、額滿、確定開課狀態清楚，產品線橫跨語言、證照、企業培訓、政府補助與生活休閒。</p>
+          <p><strong>弱勢：</strong>課程數多造成品質控管壓力，且高度市場化使民間機構競爭更直接。</p>
+        </article>
+        <article class="swot-card">
+          <h3>中山醫</h3>
+          <p><strong>強項：</strong>醫學、牙醫、護理、營養、心理、微免、職安等專業門檻高，不易被一般推廣教育機構複製。</p>
+          <p><strong>弱勢：</strong>推廣收入約千萬上下，課程數與產品線深度不足，資訊分散於首頁、Q&A、PDF 與課程頁。</p>
+        </article>
+        <article class="swot-card">
+          <h3>中山醫機會</h3>
+          <p><strong>可放大：</strong>把醫學營隊的品牌流量延伸到成人證照、醫療職能、長照、月子照護、食品安全、企業職安健康促進與醫療 AI。</p>
+          <p><strong>需控管：</strong>高中生營隊參與證明限制、家長期待、招生文宣與證書發放條件。</p>
+        </article>
+      </div>
+
+      <h3>給中山醫的收入目標</h3>
+      <div class="roadmap">
+        <article class="phase">
+          <h3>短期 1 年：達成 1,200 萬</h3>
+          <p>重點是補齊現有課程招生頁、繳費流程與轉換率，先讓 114 學年度預算目標穩定達成。</p>
+        </article>
+        <article class="phase">
+          <h3>中期 2-3 年：1,800-2,500 萬</h3>
+          <p>以成人證照、醫療職能、醫院/長照/企業委訓拉高客單價與重複開班率。</p>
+        </article>
+        <article class="phase">
+          <h3>長期 3-5 年：3,000 萬以上</h3>
+          <p>建立醫學特色推廣教育品牌，逐步接近彰師大規模。</p>
+        </article>
+      </div>
+
+      <h3>90 天行動清單</h3>
+      <div class="timeline">
+        <div class="timeline-step"><strong>盤點數據</strong><span>近三年開課數、報名數、繳費數、收入、成本、完訓率與滿意度。</span></div>
+        <div class="timeline-step"><strong>選產品線</strong><span>鎖定醫學營隊、照護證照、企業/醫療機構委訓。</span></div>
+        <div class="timeline-step"><strong>改 10 個頁面</strong><span>補狀態、價格、名額、流程、發證條件與限制。</span></div>
+        <div class="timeline-step"><strong>建立試算表</strong><span>每門課開班前先算損益平衡人數與毛利。</span></div>
+        <div class="timeline-step"><strong>試辦高價課</strong><span>醫療 AI 實務班、職場健康促進顧問班等。</span></div>
+        <div class="timeline-step"><strong>名單行銷</strong><span>校友、附醫、合作機構與既有學員社群優先轉換。</span></div>
+      </div>
+    </section>
+
+    <section id="organization">
+      <div class="section-head">
+        <div>
+          <h2>人力組織架構分析</h2>
+          <p>本段依三校公開網站可見資訊整理。彰師大與中山醫揭露成員/職掌較完整；東海推廣部公開的是部門入口、服務功能、辦公時間與平台化課程資訊，未見同等詳細的人員名冊，因此以下將「官方揭露」與「營運功能推估」分開呈現。</p>
+        </div>
+      </div>
+
+      <div class="org-grid">
+        <article class="org-card">
+          <span class="tag ncue">彰師大</span>
+          <h3>進修學院多組分工</h3>
+          <div class="org-count">
+            <strong>約 18</strong>
+            <span>公開列示職務/人員</span>
+          </div>
+          <p>官方行政團隊列出院長室、教學服務組、進修教育研究中心、總務及推廣組。推廣教育相關工作主要分散於進修教育研究中心與總務及推廣組，並由院級單位統籌。</p>
+          <p><strong>組織型態：</strong>學院制、分工細、制度治理能力強。</p>
+        </article>
+
+        <article class="org-card">
+          <span class="tag thu">東海</span>
+          <h3>推廣部平台事業型</h3>
+          <div class="org-count">
+            <strong>未公開</strong>
+            <span>完整人員名冊</span>
+          </div>
+          <p>官網呈現推廣部品牌、課程搜尋、證書驗證、場地租借、常見表單、校本部窗口與長時間辦公服務。從 312 筆公開課程與多產品線推估，其組織運作需要平台營運、課程企劃、客服招生、金流行政與合作講師管理。</p>
+          <p><strong>組織型態：</strong>市場平台制、前台服務強、課程產品經理化。</p>
+        </article>
+
+        <article class="org-card">
+          <span class="tag csmu">中山醫</span>
+          <h3>教務處推廣服務組</h3>
+          <div class="org-count">
+            <strong>4</strong>
+            <span>主任 1 + 組員 3</span>
+          </div>
+          <p>推廣教育網站列示主任負責推廣教育發展政策擬定及執行，三位組員分別承接產業人才投資方案、非學分/學分獨立開班、營隊、採購核銷、招生廣告、預算、報部資料、TTQS、職前訓練與隨班附讀。</p>
+          <p><strong>組織型態：</strong>教務行政支援型、人力精簡、承辦範圍廣。</p>
+        </article>
+      </div>
+
+      <h3>組織架構視覺比較</h3>
+      <div class="org-flow">
+        <div class="org-node accent">
+          <strong>策略/治理</strong>
+          <span>彰師大由院長室與中心/組分工；中山醫由主任擬定政策；東海以推廣部品牌承接市場定位。</span>
+        </div>
+        <div class="org-node">
+          <strong>課程企劃</strong>
+          <span>彰師大依學院、中心、審查小組分工；東海偏產品線與市場需求；中山醫依醫學專業與委訓案開課。</span>
+        </div>
+        <div class="org-node">
+          <strong>招生客服</strong>
+          <span>東海平台化最完整；彰師大有系統與電子報/社群；中山醫有會員、LINE、電話與課程頁，但資訊可再集中。</span>
+        </div>
+        <div class="org-node">
+          <strong>行政財務</strong>
+          <span>彰師大分工細；東海需支援高課程量；中山醫同時處理報部、預算、核銷、TTQS 與委訓案。</span>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>面向</th>
+              <th>彰師大</th>
+              <th>東海</th>
+              <th>中山醫</th>
+              <th>對中山醫的含意</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>組織層級</td>
+              <td>進修學院，院級統籌。</td>
+              <td>推廣部，對外品牌明確。</td>
+              <td>教務處下推廣服務組。</td>
+              <td>若要擴大產值，需讓推廣服務組具備更強的產品企劃與市場營運授權。</td>
+            </tr>
+            <tr>
+              <td>人力揭露</td>
+              <td>行政團隊公開列示約 18 個職務/人員。</td>
+              <td>未見完整人員名冊；公開服務入口與平台功能。</td>
+              <td>公開列示主任 1 位、組員 3 位。</td>
+              <td>中山醫目前人力相對精簡，若收入目標提高，需避免所有工作都落在同一組員群。</td>
+            </tr>
+            <tr>
+              <td>核心職能</td>
+              <td>在職班、學分班、第二專長、委訓、審查、法規、總務推廣。</td>
+              <td>課程平台、招生客服、價格與優惠、證書驗證、場地租借、跨類別產品線。</td>
+              <td>學分班、非學分班、營隊、政府委訓/補助、預算、報部、TTQS、招生廣告。</td>
+              <td>中山醫需要把「承辦制」升級為「產品線負責制」。</td>
+            </tr>
+            <tr>
+              <td>管理風險</td>
+              <td>分工細但流程可能較重。</td>
+              <td>課程量大，品質與講師管理壓力高。</td>
+              <td>人力少、任務廣，易產生瓶頸與知識集中風險。</td>
+              <td>應建立 SOP、課程提案模板、收益試算、CRM 與儀表板，降低個人依賴。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>中山醫建議的人力分工模型</h3>
+      <div class="org-flow">
+        <div class="org-node accent">
+          <strong>組長/主任</strong>
+          <span>策略、年度收入目標、校內系所協調、審查委員會與外部合作。</span>
+        </div>
+        <div class="org-node">
+          <strong>產品線 PM</strong>
+          <span>醫學營隊、照護證照、成人健康、企業/政府委訓四大產品線規劃與損益。</span>
+        </div>
+        <div class="org-node">
+          <strong>招生營運</strong>
+          <span>課程頁、CRM 名單、LINE/社群、廣告投放、報名轉換、客服與學員回訪。</span>
+        </div>
+        <div class="org-node">
+          <strong>行政品保</strong>
+          <span>預算核銷、報部、TTQS、證書、合約、講師資料、課後滿意度與完訓率。</span>
+        </div>
+      </div>
+
+      <div class="org-risk">
+        <div class="note">
+          <h3>短期不一定要先增編</h3>
+          <p>若短期人力無法增加，先用模板化與數位化減壓：課程提案表、損益試算表、標準課程頁、報名繳費 SOP、課後問卷與月報儀表板。</p>
+        </div>
+        <div class="note">
+          <h3>但需要明確職能切分</h3>
+          <p>以 1,200 萬收入目標可先維持精簡組織；若挑戰 1,800-2,500 萬，至少要把產品企劃、招生營運、行政品保三類工作切開，避免同一承辦同時扛招生、核銷、報部與客服。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="model">
+      <h2>一、營運模式總覽</h2>
+      <div class="cards">
+        <article class="school-card">
+          <span class="tag ncue">彰師大</span>
+          <h3>進修學院制度化管理</h3>
+          <p>以進修學院為統籌核心，公開法規、經費收支、審查小組、招生計畫書等文件。營運重點是制度治理、開課審查、行政管理費與場地費提撥。</p>
+          <p><strong>適合借鏡：</strong>後台制度、開課申請、審查與經費管理。</p>
+        </article>
+
+        <article class="school-card">
+          <span class="tag thu">東海</span>
+          <h3>推廣部品牌化平台</h3>
+          <p>以推廣部作為對外品牌，課程平台提供搜尋、分類、地點、日期、價格、早鳥、團報、確定開課與額滿狀態。</p>
+          <p><strong>適合借鏡：</strong>課程產品化、招生頁面、學員服務與證書驗證。</p>
+        </article>
+
+        <article class="school-card">
+          <span class="tag csmu">中山醫</span>
+          <h3>教務處推廣服務組</h3>
+          <p>以教務處推廣服務組為行政窗口，結合醫學、健康、生命科學、營隊與政府補助課程。常由學系主辦，推廣服務組協辦行政。</p>
+          <p><strong>發展方向：</strong>醫學特色產品線加上更集中化的行政與平台服務。</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>二、三校定位比較</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>學校</th>
+              <th>承辦單位定位</th>
+              <th>主要營運模式</th>
+              <th>課程組合</th>
+              <th>對外入口</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>彰師大</td>
+              <td>進修學院統籌</td>
+              <td>制度化、法規化、校內單位提案導向</td>
+              <td>證照、藝文、資訊、語言、營隊、企管、師資培訓、政府委訓、教師進修學分班、理工農醫等</td>
+              <td>進修學院官網＋推廣教育管理系統</td>
+            </tr>
+            <tr>
+              <td>東海</td>
+              <td>推廣部獨立品牌窗口</td>
+              <td>市場化、平台化、產品線導向</td>
+              <td>人文藝術、經管貿易、企業委訓、創意設計、財金研訓、政府委訓、語言、樂齡、投資理財、產學培訓等</td>
+              <td>推廣部課程平台＋學員登入＋場地租借＋證書驗證</td>
+            </tr>
+            <tr>
+              <td>中山醫</td>
+              <td>教務處推廣服務組</td>
+              <td>教務行政型窗口，結合醫學大學特色與各系所專業</td>
+              <td>學分班、非學分班、專業證照、養生保健、國高中營隊、政府委訓、政府補助</td>
+              <td>推廣教育網站＋會員註冊/登入＋LINE/Facebook＋教務處 Q&A</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="process">
+      <h2>三、行政做法比較</h2>
+      <div class="compare-grid">
+        <div class="note">
+          <h3>招生與報名</h3>
+          <p>彰師大常採「先線上報名，成班或錄取後再寄繳費單」；東海以推廣部平台與會員流程承接，政府補助課程接職訓 E 網；中山醫有線上、現場與通訊報名，營隊常採報名時間排序與備取遞補。</p>
+        </div>
+        <div class="note">
+          <h3>收費與優惠</h3>
+          <p>彰師大常見早鳥、校內生、校友、舊生優惠；東海價格呈現最完整，常列原價、早鳥、團報與補助後自付額；中山醫則依營隊與醫學特色課程提供早鳥、清寒或低收優惠。</p>
+        </div>
+        <div class="note">
+          <h3>退費與轉班</h3>
+          <p>彰師大採教育部推廣教育規範脈絡：開班前九成、未逾三分之一半數、逾三分之一不退。東海依課程類型細分，且退費申請需紙本親簽寄回。中山醫規則清楚，但常分散在課程頁與簡章。</p>
+        </div>
+        <div class="note">
+          <h3>證書與學習成果</h3>
+          <p>彰師大常以出席比例作為研習證書門檻；東海設證書驗證與補發/成績單申請；中山醫可發推廣教育結業證書，但高中營隊需注意教育部對參與證明的限制。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="csmu">
+      <h2>四、中山醫與兩校的關鍵差異</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>面向</th>
+              <th>中山醫現況</th>
+              <th>彰師大可參考處</th>
+              <th>東海可參考處</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>組織治理</td>
+              <td>教務處推廣服務組，偏行政支援與課程協辦</td>
+              <td>建立完整推廣教育要點、經費收支、審查小組、招生計畫書流程</td>
+              <td>以推廣部品牌統一對外，課程產品化與平台化</td>
+            </tr>
+            <tr>
+              <td>課程特色</td>
+              <td>醫學、健康、營隊、政府補助具優勢</td>
+              <td>強化校內各系所開課提案制度與審查</td>
+              <td>強化市場課程分類、價格策略、確定開課狀態</td>
+            </tr>
+            <tr>
+              <td>報名繳費</td>
+              <td>線上、現場、通訊並行；學分班現場仍見現金流程</td>
+              <td>先報名、成班/錄取後 E-mail 繳費單，降低退費量</td>
+              <td>學員登入、線上課程搜尋、繳費通知、依繳費順序錄取</td>
+            </tr>
+            <tr>
+              <td>退費行政</td>
+              <td>規則清楚，但分散在課程頁與簡章</td>
+              <td>與教育部規範一致，可制度化成統一公開頁</td>
+              <td>退費申請、證書補發等集中於常見表單</td>
+            </tr>
+            <tr>
+              <td>數位服務</td>
+              <td>有會員、LINE、Facebook，但流程資訊可再集中</td>
+              <td>法規、表單、申請文件集中頁</td>
+              <td>證書驗證、場地租借、常見表單入口</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="recommendations">
+      <h2>五、給中山醫推廣服務組的改善建議</h2>
+      <div class="recommendations">
+        <article class="rec">
+          <h3>建立推廣教育行政專區</h3>
+          <p>集中推廣教育實施要點、開班申請、講師聘任、收費退費、結業證書、保險、未成年家長同意書與常用表單。</p>
+        </article>
+        <article class="rec">
+          <h3>統一退費與轉班說明</h3>
+          <p>建立固定頁面，所有課程頁只連結統一規範；課程若有特殊條件，再於課程頁加註例外，降低爭議與承辦壓力。</p>
+        </article>
+        <article class="rec">
+          <h3>逐步減少現金流程</h3>
+          <p>將現場現金與通訊報名逐步轉向錄取後銷帳編號、ATM、網銀或線上繳費，以降低對帳、保管與退費行政成本。</p>
+        </article>
+        <article class="rec">
+          <h3>強化課程平台商品資訊</h3>
+          <p>加入招生中、確定開課、即將額滿、已額滿、停開等狀態，並清楚列原價、早鳥、校友、舊生、清寒與補助價格。</p>
+        </article>
+        <article class="rec">
+          <h3>發展醫學特色產品線</h3>
+          <p>將課程整理為醫學探索營、醫療職能與證照、成人健康素養、政府補助/委訓、校內跨域微課程等系列。</p>
+        </article>
+        <article class="rec">
+          <h3>建立證書驗證與補發服務</h3>
+          <p>導入結業證書驗證、補發申請、中英文證明申請與出席紀錄保存規則，同時明確標示高中營隊不得授予參與證明的限制。</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>六、結論</h2>
+      <p>彰師大強在制度治理與校內流程，適合作為中山醫建立內規、審查、經費與開課申請制度的參考。東海強在市場化營運與課程平台，適合作為中山醫改善課程搜尋、價格呈現、報名轉換與學員服務的參考。</p>
+      <p>中山醫推廣服務組可採取「彰師大的制度化後台＋東海的平台化前台」：後台統一開課、收費、退費、證書與表單；前台強化課程分類、價格、狀態、線上報名與即時通知。這樣可以保留醫學特色，同時降低承辦行政負擔並提升招生轉換率。</p>
+    </section>
+
+    <section id="sources">
+      <h2>七、來源連結</h2>
+      <div class="sources">
+        <div class="source-group">
+          <h3>彰師大</h3>
+          <ul>
+            <li><a href="https://cee.ncue.edu.tw/">進修學院</a></li>
+            <li><a href="https://cee.ncue.edu.tw/about.php?sn=2">組織架構</a></li>
+            <li><a href="https://cee.ncue.edu.tw/about_team.php">行政團隊</a></li>
+            <li><a href="https://cee.ncue.edu.tw/course.php">推廣教育課程</a></li>
+            <li><a href="https://cee.ncue.edu.tw/regulation.php?masn=4">推廣教育法規專區</a></li>
+            <li><a href="https://cee.ncue.edu.tw/news_detail.php?sn=784">推廣教育課程簡章公告</a></li>
+            <li><a href="https://accountingweb.ncue.edu.tw/var/file/11/1011/img/662/369092626.pdf">112 年度校務基金決算</a></li>
+            <li><a href="https://accountingweb.ncue.edu.tw/var/file/11/1011/img/834436623.pdf">113 年度校務基金決算</a></li>
+            <li><a href="https://accountingweb.ncue.edu.tw/var/file/11/1011/img/897200008.pdf">114 年度校務基金決算</a></li>
+          </ul>
+        </div>
+        <div class="source-group">
+          <h3>東海</h3>
+          <ul>
+            <li><a href="https://eec.thu.edu.tw/">推廣部</a></li>
+            <li><a href="https://eec.thu.edu.tw/search/course">課程搜尋</a></li>
+            <li><a href="https://eec.thu.edu.tw/blog/home-common-q-form">常見問題與表單</a></li>
+            <li><a href="https://eec.thu.edu.tw/course/detail/26743">隨班附讀學分班公告</a></li>
+            <li><a href="https://sustainable.thu.edu.tw/wp-content/uploads/%E6%9C%83%E8%A8%88%E5%AE%A4-%E8%BF%913%E5%B9%B4%E6%94%B6%E5%85%A5%E5%88%86%E6%9E%90.pdf">近三年收入分析</a></li>
+            <li><a href="https://account.thu.edu.tw/upload/account/admissions_upload/242_114budget_1140916.pdf">114 學年度預算書</a></li>
+          </ul>
+        </div>
+        <div class="source-group">
+          <h3>中山醫</h3>
+          <ul>
+            <li><a href="https://extservice.csmu.edu.tw/">推廣教育網站</a></li>
+            <li><a href="https://extservice.csmu.edu.tw/ExtMembers.aspx">推廣服務組成員/業務職掌</a></li>
+            <li><a href="https://www.csmu.edu.tw/p/412-1000-138.php?Lang=zh-tw">中山醫行政單位</a></li>
+            <li><a href="https://oaa.csmu.edu.tw/p/404-1009-66501.php?Lang=zh-tw">學分班報名 Q&A</a></li>
+            <li><a href="https://oaa.csmu.edu.tw/p/404-1009-66523.php?Lang=zh-tw">最新課程訊息 Q&A</a></li>
+            <li><a href="https://extservice.csmu.edu.tw/ClassContent.aspx?ChClassNo=608543-20190146">課程頁例</a></li>
+            <li><a href="https://account.csmu.edu.tw/var/file/2/1002/img/988/303256671.pdf">112 學年度決算書</a></li>
+            <li><a href="https://account.csmu.edu.tw/var/file/2/1002/img/988/112551327.pdf">113 學年度決算書</a></li>
+            <li><a href="https://account.csmu.edu.tw/var/file/2/1002/img/988/507580324.pdf">114 學年度預算書</a></li>
+          </ul>
+        </div>
+      </div>
+      <p>本次另存之機器可讀快照：<a href="public_course_snapshot_20260623.json">public_course_snapshot_20260623.json</a></p>
+    </section>
+
+    <p class="footer">本頁為本機靜態網頁，資料依 2026-06-23 可查得之公開資訊整理。</p>
+  </main>
+</body>
+</html>

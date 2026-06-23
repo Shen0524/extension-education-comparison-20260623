@@ -1,0 +1,710 @@
+{
+  "snapshot_date": "2026-06-23",
+  "notes": [
+    "Counts are public website snapshots, not official financial statements.",
+    "NCUE and THU course counts include public database/listing pages and may include old, closed, or duplicated course rounds.",
+    "CSMU homepage exposes category counts directly; full list pages may require category-specific navigation."
+  ],
+  "ncue": {
+    "historical_detail_links_count": 666,
+    "public_listing_count": 24,
+    "category_counts": {
+      "師資培訓": 4,
+      "理工農醫": 1,
+      "藝文生活": 6,
+      "語文學習": 1,
+      "證照檢定": 5,
+      "財會金融": 2,
+      "資訊科技": 5
+    },
+    "sample_courses": [
+      {
+        "date": "2026/11/07",
+        "category": "證照檢定",
+        "name": "第十期－勞資事務師專業證照輔導班"
+      },
+      {
+        "date": "2026/11/07",
+        "category": "語文學習",
+        "name": "115年臺灣台語認證基礎班-台羅拼音(實體+線上同步)"
+      },
+      {
+        "date": "2026/10/31",
+        "category": "理工農醫",
+        "name": "沙盤治療~非語言媒材於心理諮商與親子工作之應用"
+      },
+      {
+        "date": "2026/10/04",
+        "category": "師資培訓",
+        "name": "115年中等學校特殊教育身心障礙組在職教師加註情緒與行為需求次專長學分班"
+      },
+      {
+        "date": "2026/10/03",
+        "category": "師資培訓",
+        "name": "(僅開放專任教師報名，代理教師名額額滿)115年國民中學綜合活動領域童軍專長第二專長學分班"
+      },
+      {
+        "date": "2026/09/16",
+        "category": "財會金融",
+        "name": "會計師資格學士學分班-稅務法規"
+      },
+      {
+        "date": "2026/09/15",
+        "category": "財會金融",
+        "name": "會計師資格學士學分班-管理會計學"
+      },
+      {
+        "date": "2026/09/14",
+        "category": "師資培訓",
+        "name": "115年度中等學校語文領域本土語文臺灣台語專長教師在職進修第二專長學分班"
+      },
+      {
+        "date": "2026/08/29",
+        "category": "藝文生活",
+        "name": "【質感美學】告別無效化妝！找到最適合你的命定妝容"
+      },
+      {
+        "date": "2026/08/16",
+        "category": "藝文生活",
+        "name": "新手彩妝體驗課：120分鐘解鎖你的專屬原生美(第二班)"
+      },
+      {
+        "date": "2026/08/16",
+        "category": "藝文生活",
+        "name": "新手彩妝體驗課：120分鐘解鎖你的專屬原生美(第一班)"
+      },
+      {
+        "date": "2026/08/10",
+        "category": "藝文生活",
+        "name": "【小小藝術探險家】名畫與自然創作夏令營"
+      },
+      {
+        "date": "2026/08/09",
+        "category": "證照檢定",
+        "name": "第十一期【APMA專業認證】一般專案經理證照培訓班"
+      },
+      {
+        "date": "2026/08/08",
+        "category": "證照檢定",
+        "name": "第二十二期－就業服務乙級技術士證照輔導班"
+      },
+      {
+        "date": "2026/08/02",
+        "category": "師資培訓",
+        "name": "115年「中小學教育領袖經營素養增能班」"
+      },
+      {
+        "date": "2026/07/25",
+        "category": "資訊科技",
+        "name": "Vibe Coding 創業煉金術：用AI打造專屬商業平台"
+      },
+      {
+        "date": "2026/07/25",
+        "category": "證照檢定",
+        "name": "CBM嬰幼兒撫觸按摩與知覺動作遊戲檢定班"
+      },
+      {
+        "date": "2026/07/25",
+        "category": "證照檢定",
+        "name": "BSS寶寶音樂手語檢定班"
+      },
+      {
+        "date": "2026/07/20",
+        "category": "資訊科技",
+        "name": "【2026兒童夏令營】Minecraft天工開物-奇幻的科學之旅"
+      },
+      {
+        "date": "2026/07/19",
+        "category": "藝文生活",
+        "name": "【一缽入心】PSSBR頌缽單缽音療師認證課"
+      }
+    ]
+  },
+  "thu": {
+    "public_listing_count": 312,
+    "status_counts": {
+      "招生中": 288,
+      "已額滿": 24,
+      "確定開課": 117
+    },
+    "price_count": 303,
+    "price_min": 300,
+    "price_max": 175500,
+    "highest_session_courses": [
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26999",
+        "name": "日文J1班(含日語五十音)(可實體可遠距)",
+        "status": [
+          "招生中"
+        ],
+        "session": 194,
+        "date": "2026/09/19",
+        "price": 7200
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26957",
+        "name": "日文J1班（白天班）(含日語五十音)(可實體可遠距)",
+        "status": [
+          "招生中"
+        ],
+        "session": 193,
+        "date": "2026/09/30",
+        "price": 7200
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26947",
+        "name": "日文J1班（白天班）(含日語五十音)",
+        "status": [
+          "招生中"
+        ],
+        "session": 192,
+        "date": "2026/09/16",
+        "price": 7200
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26742",
+        "name": "日文J1班(含日語五十音)(可實體可遠距)",
+        "status": [
+          "招生中"
+        ],
+        "session": 191,
+        "date": "2026/08/03",
+        "price": 7200
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26741",
+        "name": "日文J1班（白天班）(含日語五十音)(可實體可遠距)",
+        "status": [
+          "招生中"
+        ],
+        "session": 190,
+        "date": "2026/07/17",
+        "price": 7200
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26647",
+        "name": "日文J1班(含日語五十音)（暑期密集班）(可實體可遠距)",
+        "status": [
+          "招生中",
+          "確定開課"
+        ],
+        "session": 189,
+        "date": "2026/07/01",
+        "price": 7200
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26972",
+        "name": "日文J2班(白天班)(可實體可遠距)",
+        "status": [
+          "招生中"
+        ],
+        "session": 155,
+        "date": "2026/08/06",
+        "price": 7200
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26761",
+        "name": "日文J2班(可實體可遠距)",
+        "status": [
+          "招生中"
+        ],
+        "session": 154,
+        "date": "2026/08/03",
+        "price": 7200
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26648",
+        "name": "日文J2班（暑期密集班）(可實體可遠距)",
+        "status": [
+          "招生中"
+        ],
+        "session": 153,
+        "date": "2026/08/03",
+        "price": 7200
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26454",
+        "name": "日文J2班(可實體可遠距)",
+        "status": [
+          "招生中",
+          "確定開課"
+        ],
+        "session": 152,
+        "date": "2026/06/13",
+        "price": 7200
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26909",
+        "name": "韓文(一)",
+        "status": [
+          "招生中"
+        ],
+        "session": 152,
+        "date": "2026/08/17",
+        "price": 7000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26908",
+        "name": "韓文(一)",
+        "status": [
+          "招生中"
+        ],
+        "session": 151,
+        "date": "2026/07/16",
+        "price": 7000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26711",
+        "name": "韓文(一)暑期密集班",
+        "status": [
+          "招生中",
+          "確定開課"
+        ],
+        "session": 150,
+        "date": "2026/07/06",
+        "price": 7000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26883",
+        "name": "採購專業人員基礎訓練班第一期(苗栗縣政府專班)",
+        "status": [
+          "招生中"
+        ],
+        "session": 126,
+        "date": "2026/08/01",
+        "price": 8100
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26897",
+        "name": "日文J3班（可實體可遠距）",
+        "status": [
+          "招生中"
+        ],
+        "session": 125,
+        "date": "2026/09/02",
+        "price": 7200
+      }
+    ],
+    "high_price_courses": [
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26931",
+        "name": "2026 加拿大TRU商學院：全球高階管理專案研習B",
+        "status": [
+          "招生中"
+        ],
+        "session": 1,
+        "date": "2026/07/17",
+        "price": 175500
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26336",
+        "name": "NEXT 5.0企業躍升計畫：企業AI運營管理與供應鏈佈局戰略大師班(喬治亞理工學院課程)",
+        "status": [
+          "招生中",
+          "確定開課"
+        ],
+        "session": 2,
+        "date": "2026/04/11",
+        "price": 80000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/27008",
+        "name": "室內設計乙級技術士證照全修班",
+        "status": [
+          "招生中"
+        ],
+        "session": 54,
+        "date": "2026/10/03",
+        "price": 48000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/27009",
+        "name": "室內設計乙級技術士證照全修班",
+        "status": [
+          "招生中"
+        ],
+        "session": 55,
+        "date": "2026/11/13",
+        "price": 48000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/23895",
+        "name": "報告認證實務工作坊",
+        "status": [
+          "招生中"
+        ],
+        "session": 3,
+        "date": "2024/12/21",
+        "price": 36000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26262",
+        "name": "國際專案管理師證照PMP培訓班",
+        "status": [
+          "招生中"
+        ],
+        "session": 88,
+        "date": "2026/07/26",
+        "price": 35000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/27037",
+        "name": "國際專案管理師證照PMP培訓班",
+        "status": [
+          "招生中"
+        ],
+        "session": 89,
+        "date": "2026/10/17",
+        "price": 35000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/27007",
+        "name": "裝潢木工乙級技術士檢定考照班",
+        "status": [
+          "招生中"
+        ],
+        "session": 18,
+        "date": "2026/11/15",
+        "price": 24000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26693",
+        "name": "2026東海小學堂夏令營(七月)─7/7-7/9小馬與我的夏日冒險",
+        "status": [
+          "招生中",
+          "確定開課"
+        ],
+        "session": 5,
+        "date": "2026/07/07",
+        "price": 18000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26694",
+        "name": "2026東海小學堂夏令營(七月)─7/14-7/16小馬與我的夏日冒險",
+        "status": [
+          "招生中",
+          "確定開課"
+        ],
+        "session": 5,
+        "date": "2026/07/14",
+        "price": 18000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26763",
+        "name": "2026東海小學堂夏令營(八月)─8/4-8/6小馬FUN假趣",
+        "status": [
+          "招生中"
+        ],
+        "session": 6,
+        "date": "2026/08/04",
+        "price": 18000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26765",
+        "name": "2026東海小學堂夏令營(八月)─8/11-8/13小馬FUN假趣",
+        "status": [
+          "招生中"
+        ],
+        "session": 6,
+        "date": "2026/08/11",
+        "price": 18000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26766",
+        "name": "2026東海小學堂夏令營(八月)─8/18-8/20小馬FUN假趣",
+        "status": [
+          "招生中"
+        ],
+        "session": 6,
+        "date": "2026/08/18",
+        "price": 18000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26768",
+        "name": "2026東海小學堂夏令營(八月)─8/25-8/27小馬FUN假趣",
+        "status": [
+          "招生中"
+        ],
+        "session": 6,
+        "date": "2026/08/25",
+        "price": 18000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26484",
+        "name": "l財金中心l RFA退休理財規劃顧問培訓(實體班)",
+        "status": [
+          "招生中",
+          "確定開課"
+        ],
+        "session": 9,
+        "date": "2026/07/12",
+        "price": 17800
+      }
+    ],
+    "sample_courses": [
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/23895",
+        "name": "報告認證實務工作坊",
+        "status": [
+          "招生中"
+        ],
+        "session": 3,
+        "date": "2024/12/21",
+        "price": 36000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26550",
+        "name": "114(下)電腦教室-週五",
+        "status": [
+          "招生中"
+        ],
+        "session": 2,
+        "date": "2026/02/27",
+        "price": null
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26743",
+        "name": "115學年度上學期隨班附讀學分班(公告專區)",
+        "status": [
+          "招生中"
+        ],
+        "session": 49,
+        "date": "",
+        "price": null
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26336",
+        "name": "NEXT 5.0企業躍升計畫：企業AI運營管理與供應鏈佈局戰略大師班(喬治亞理工學院課程)",
+        "status": [
+          "招生中",
+          "確定開課"
+        ],
+        "session": 2,
+        "date": "2026/04/11",
+        "price": 80000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26597",
+        "name": "產業人才投資計畫－高效談判與協商實務班",
+        "status": [
+          "招生中",
+          "確定開課"
+        ],
+        "session": 1,
+        "date": "2026/04/19",
+        "price": 7000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26629",
+        "name": "兒童繪畫假日班",
+        "status": [
+          "招生中",
+          "確定開課"
+        ],
+        "session": 4,
+        "date": "2026/05/23",
+        "price": 6000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26536",
+        "name": "採購專業人員基礎訓練班第二期(假日班)",
+        "status": [
+          "已額滿"
+        ],
+        "session": 122,
+        "date": "2026/05/31",
+        "price": 8300
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/27023",
+        "name": "馬術運動-20分鐘訓練課程",
+        "status": [
+          "招生中"
+        ],
+        "session": 29,
+        "date": "2026/06/01",
+        "price": 1300
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26846",
+        "name": "知行合一領導才能卓越營－Ｔ型領導人才養成（週二）班",
+        "status": [
+          "招生中",
+          "確定開課"
+        ],
+        "session": 45,
+        "date": "2026/06/02",
+        "price": 9000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26530",
+        "name": "室內裝修工程管理乙級證照班(週六班)",
+        "status": [
+          "招生中",
+          "確定開課"
+        ],
+        "session": 51,
+        "date": "2026/06/06",
+        "price": 16000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26592",
+        "name": "居家水電維修DIY入門班",
+        "status": [
+          "已額滿"
+        ],
+        "session": 3,
+        "date": "2026/06/06",
+        "price": 6800
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26949",
+        "name": "人馬互動【周六班-下午】",
+        "status": [
+          "招生中"
+        ],
+        "session": 29,
+        "date": "2026/06/06",
+        "price": 300
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26531",
+        "name": "室內裝修工程管理乙級證照班(週日班)",
+        "status": [
+          "招生中",
+          "確定開課"
+        ],
+        "session": 51,
+        "date": "2026/06/07",
+        "price": 16000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26950",
+        "name": "人馬互動【周日班-上午】",
+        "status": [
+          "招生中"
+        ],
+        "session": 29,
+        "date": "2026/06/07",
+        "price": 300
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26441",
+        "name": "法律與生活∼車禍等事故規範與實務",
+        "status": [
+          "招生中"
+        ],
+        "session": 20,
+        "date": "2026/06/10",
+        "price": 4800
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26649",
+        "name": "八肢瑜珈",
+        "status": [
+          "招生中",
+          "確定開課"
+        ],
+        "session": 4,
+        "date": "2026/06/10",
+        "price": 4080
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26685",
+        "name": "德文(三)班(可實體可遠距)",
+        "status": [
+          "招生中",
+          "確定開課"
+        ],
+        "session": 30,
+        "date": "2026/06/11",
+        "price": 6800
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26822",
+        "name": "繪本創作實驗室-創作即療癒",
+        "status": [
+          "招生中",
+          "確定開課"
+        ],
+        "session": 11,
+        "date": "2026/06/12",
+        "price": 4500
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26439",
+        "name": "產業人才投資計畫－國際貿易人才特訓班",
+        "status": [
+          "招生中"
+        ],
+        "session": 1,
+        "date": "2026/06/13",
+        "price": 7000
+      },
+      {
+        "link": "https://eec.thu.edu.tw/course/detail/26454",
+        "name": "日文J2班(可實體可遠距)",
+        "status": [
+          "招生中",
+          "確定開課"
+        ],
+        "session": 152,
+        "date": "2026/06/13",
+        "price": 7200
+      }
+    ]
+  },
+  "csmu": {
+    "counts_visible_on_homepage": {
+      "研究所學分班": 5,
+      "大學部學分班": 8,
+      "專業證照": 3,
+      "養生保健": 1,
+      "國高中營隊": 8,
+      "政府補助": 5
+    },
+    "latest_news_sample": [
+      [
+        "中山醫學大學推廣教育 訊息標題 × 訊息內容 OK × 取 消 刪 除 中山醫學大學推廣教育 最新消息 (current) 單位簡介 願景、使命、價值觀 成員/業務職掌 學 分 班 研究所學分專班 大學部學分專班 研究所學分班 5 大學部學分班 8 非學分班 專業證照 3 美髮美容 養生保健 1 美食烹飪 生活藝術 美術音樂 資訊電腦 國高中營隊 8 兒童冬令營 兒童夏令營 政府委訓 政府委訓 政府補助 5 會員登入 會員註冊 忘記密碼 關於我們 聯絡我們 地理位置 乘車及交通資訊 加入官方LINE 單位簡介 學校首頁 教務處首頁 推廣教育首頁 願景、使命、價值觀 成員/業務職掌 學分班 研究所學分專班 大學部學分專班 研究所學分班 5 大學部學分班 8 非學分班 專業證照 3 國際語文 美髮美容 舞蹈瑜珈 養生保健 1 美食烹飪 生活藝術 美術音樂 資訊電腦 國高中營隊 8 兒童冬令營 兒童夏令營 政府委訓 政府委訓 政府補助 5 相關資訊 最新消息 地理位置 乘車資訊 會員註冊 忘記密碼 常見問題 隱私權政策 Previous Next 最新消息 教育部補助-樂齡大學開始預約報名囉！額滿為止喔！",
+        "2026/06/17"
+      ],
+      [
+        " 7月至8月期間每週五為本校休假日，當日暫停各項行政服務",
+        "2026/06/12"
+      ],
+      [
+        " 坐月子照護員培訓班-第2期-錄訓名單",
+        "2026/01/14"
+      ],
+      [
+        " 坐月子照護員培訓班-錄訓名單",
+        "2025/08/14"
+      ],
+      [
+        " 坐月子照護員培訓班✨✨招生中✨✨",
+        "2025/07/09"
+      ],
+      [
+        " 1 2 3 4 5 ... 最新消息 教育部補助-樂齡大學開始預約報名囉！額滿為止喔！",
+        "2026/06/17"
+      ],
+      [
+        " 7月至8月期間每週五為本校休假日，當日暫停各項行政服務",
+        "2026/06/12"
+      ],
+      [
+        " 坐月子照護員培訓班-第2期-錄訓名單",
+        "2026/01/14"
+      ],
+      [
+        " 坐月子照護員培訓班-錄訓名單",
+        "2025/08/14"
+      ],
+      [
+        " 坐月子照護員培訓班✨✨招生中✨✨",
+        "2025/07/09"
+      ]
+    ],
+    "page_update_date": "2026/6/23"
+  }
+}
